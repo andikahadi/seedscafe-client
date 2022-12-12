@@ -7,6 +7,7 @@ import { useStepContext } from "@mui/material";
 import OrderListUpdate from "./OrderListUpdate";
 
 const OrderList = (props) => {
+  const serverUri = "http://54.95.77.120";
   let totalPrice = 0;
   for (let i = 0; i < props.foodOrder.length; i++) {
     totalPrice =
@@ -18,7 +19,7 @@ const OrderList = (props) => {
   const [indexEdit, setIndexEdit] = useState();
 
   const handleSubmitOrderClick = () => {
-    let uri = "http://localhost:5006/order/create/";
+    let uri = serverUri + "/order/create/";
     props.postToOrderDB(uri, props.foodOrder);
 
     props.handleOrderPageChange("OrderSubmission");

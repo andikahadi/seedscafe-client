@@ -4,8 +4,9 @@ import "./menuStyles.css";
 const CashierAdmin = () => {
   // fetch all orders
   const [orders, setOrders] = useState([]);
+  const serverUri = "http://54.95.77.120";
   const fetchOrders = async () => {
-    const res = await fetch("http://localhost:5006/order/");
+    const res = await fetch(serverUri + "/order/");
     const data = await res.json();
     setOrders(data);
   };
@@ -16,7 +17,7 @@ const CashierAdmin = () => {
 
   // change status to paid
   const handlePaid = async () => {
-    await fetch("http://localhost:5006/order/update/" + orders[0]._id, {
+    await fetch(serverUri + "/order/update/" + orders[0]._id, {
       method: "PATCH",
       body: JSON.stringify({
         paid: true,
@@ -30,7 +31,7 @@ const CashierAdmin = () => {
 
   // change status to fulfilled
   const handleFulfilled = async () => {
-    await fetch("http://localhost:5006/order/delete/" + orders[0]._id, {
+    await fetch(serverUri + "/order/delete/" + orders[0]._id, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json; charset=UTF-8",

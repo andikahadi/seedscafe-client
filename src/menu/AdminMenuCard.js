@@ -10,6 +10,7 @@ const AdminMenuCard = (props) => {
   const [tags, setTags] = useState();
   const [description, setDescription] = useState();
   const [imgUrl, setImgUrl] = useState();
+  const serverUri = "http://54.95.77.120";
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -61,7 +62,7 @@ const AdminMenuCard = (props) => {
   const handleUpdateClick = () => {
     setMenuAdminUpdate(true);
 
-    fetchById("http://localhost:5006/menu/findbyid/" + data._id);
+    fetchById(serverUri + "/menu/findbyid/" + data._id);
   };
 
   const handleSubmitClick = async () => {
@@ -73,7 +74,7 @@ const AdminMenuCard = (props) => {
       tags,
       img: imgUrl,
     };
-    const uri = "http://localhost:5006/menu/updatemenuitem/" + data._id;
+    const uri = serverUri + "/menu/updatemenuitem/" + data._id;
     const res = await fetch(uri, {
       // Adding method type
       method: "PATCH",
@@ -94,7 +95,7 @@ const AdminMenuCard = (props) => {
   };
 
   // const handleUpdate = () => {
-  //   fetch("http://127.0.0.1:5006/menu/updatemenuitem", {
+  //   fetch("/menu/updatemenuitem", {
   //     method: "PATCH",
   //     body: {
   //       id: dish._id
@@ -108,7 +109,7 @@ const AdminMenuCard = (props) => {
 
   const handleDeleteClick = async () => {
     const id = data._id;
-    await fetch("http://127.0.0.1:5006/menu/deletemenuitem", {
+    await fetch(serverUri + "/menu/deletemenuitem", {
       method: "DELETE",
       body: JSON.stringify({ _id: id }),
       headers: {

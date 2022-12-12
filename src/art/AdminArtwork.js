@@ -14,7 +14,8 @@ const AdminArtwork = ({ ArtData }) => {
   const [sold, setSold] = useState(false);
 
   const updateArtData = async () => {
-    const res = await fetch("http://127.0.0.1:5006/artwork/update", {
+    const serverUri = "http://54.95.77.120";
+    const res = await fetch(serverUri + "/artwork/update", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

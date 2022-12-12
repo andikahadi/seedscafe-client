@@ -12,6 +12,7 @@ const MenuAdmin = (props) => {
   const [tags, setTags] = useState();
   const [description, setDescription] = useState();
   const [imgUrl, setImgUrl] = useState();
+  const serverUri = "http://54.95.77.120";
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -53,7 +54,7 @@ const MenuAdmin = (props) => {
   };
 
   const handleCreate = async () => {
-    const res = await fetch("http://localhost:5006/menu/newmenuitem", {
+    const res = await fetch(serverUri + "/menu/newmenuitem", {
       method: "PUT",
       body: JSON.stringify({
         name,
@@ -86,7 +87,7 @@ const MenuAdmin = (props) => {
 
   const fetchCategoryItems = async () => {
     const res = await fetch(
-      "http://localhost:5006/menu/findbycategory/" + props.catSelected
+      serverUri + "/menu/findbycategory/" + props.catSelected
     );
     const data = await res.json();
     setDishes(data);

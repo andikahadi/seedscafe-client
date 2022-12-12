@@ -7,9 +7,10 @@ const OrderStateContainer = (props) => {
   const [orderPage, setOrderPage] = useState("OrderList");
   const [orderID, setOrderID] = useState();
   const [orderNumber, setOrderNumber] = useState();
+  const serverUri = "http://54.95.77.120";
 
   const fetchOrderNumber = async () => {
-    const res = await fetch("http://localhost:5006/order/count", {
+    const res = await fetch(serverUri + "/order/count", {
       // Adding method type
       method: "GET",
 

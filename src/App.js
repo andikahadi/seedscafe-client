@@ -6,7 +6,6 @@ import { Route, Routes } from "react-router-dom";
 import ArtGallery from "./art/ArtGallery";
 import SpecificArtworkPage from "./art/SpecificArtworkPage";
 import AdminArtwork from "./art/AdminArtwork";
-
 import CashierAdmin from "./menu/CashierAdmin";
 import OrderSubmission from "./menu/OrderSubmission";
 import MenuCategory from "./menu/MenuCategory";
@@ -43,9 +42,10 @@ function App() {
   const [tableNumber, setTableNumber] = useState();
   const [FullMenu, setFullMenu] = useState([]);
 
+  const serverUri = "http://54.95.77.120";
   //========================menu - fetch data from DB==========================
   const fetchMenuItems = async () => {
-    const res = await fetch("http://localhost:5006/menu/allmenuitems");
+    const res = await fetch(serverUri + "/menu/allmenuitems");
     const data = await res.json();
     setFullMenu(data);
   };
@@ -57,13 +57,13 @@ function App() {
 
   //========================fetch data from DB==========================
   const fetchArtData = async () => {
-    const res = await fetch("http://127.0.0.1:5006/artwork/allartwork");
+    const res = await fetch(serverUri + "/artwork/allartwork");
     const data = await res.json();
     return data;
   };
 
   const fetchArtistData = async () => {
-    const res = await fetch("http://127.0.0.1:5006/artist/allartist");
+    const res = await fetch(serverUri + "/artist/allartist");
     const data = await res.json();
     return data;
   };

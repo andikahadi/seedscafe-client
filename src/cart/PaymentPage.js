@@ -28,9 +28,9 @@ const PaymentPage = ({
   const [cardDetails, setCardDetails] = useState(false);
 
   console.log({ cartArtDetails });
-
+  const serverUri = "http://54.95.77.120";
   const updateToSold = async (id) => {
-    const res = await fetch("http://127.0.0.1:5006/artwork/update", {
+    const res = await fetch(serverUri + "/artwork/update", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const PaymentPage = ({
   };
 
   const createShippingDB = async () => {
-    const res = await fetch("http://127.0.0.1:5006/shipping/createshipping", {
+    const res = await fetch(serverUri + "/shipping/createshipping", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
