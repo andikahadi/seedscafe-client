@@ -19,7 +19,7 @@ const SpecificArtworkPage = ({
   const handleOtherArtworkClick = (otherArtWork) => {
     setSpecificArtworkDetails(otherArtWork);
     setArtGalleryHeader(otherArtWork);
-    console.log(otherArtWork.category);
+    // console.log(otherArtWork.category);
   };
 
   // x = removing current artwork from the array. leaving the remaining in the array
@@ -39,7 +39,6 @@ const SpecificArtworkPage = ({
     setCartArtDetails(itemsInCart);
     setShoppingCartNumber(itemsInCart.length);
   };
-  console.log(y);
   //========================================================================================
 
   return (

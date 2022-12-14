@@ -70,7 +70,6 @@ const MenuAdmin = (props) => {
     });
 
     const createdData = await res.json();
-    console.log(createdData);
 
     handleNewEntry(createdData);
     setName("");

@@ -23,7 +23,7 @@ const OrderStateContainer = (props) => {
     });
 
     const data = await res.json();
-    console.log(data);
+
     setOrderNumber(data);
   };
 
@@ -59,7 +59,7 @@ const OrderStateContainer = (props) => {
     });
 
     fetchOrderNumber();
-    console.log(`ordernumber : ${orderNumber}`);
+
     let orderDBinput = {
       mode: props.tableNumber === "Takeaway" ? "Take Away" : "Dine In",
       number: props.tableNumber.toString(),

@@ -51,7 +51,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(`fetching when mount FullMenu`);
     fetchMenuItems();
   }, []);
 
@@ -74,12 +73,7 @@ function App() {
 
       const artistRes = await fetchArtistData();
 
-      console.log("successfully fetched");
-
       const fullArtData = await artRes.map((artRes) => {
-        // for (let j = 0; j < artistRes.length; j++)
-        // console.log(j);
-        // if (artRes.artistName === artistRes[j].artistName) {
         let img;
         if (artRes.img) {
           try {
@@ -134,14 +128,11 @@ function App() {
         };
       });
       setArtData(fullArtData);
-      console.log(fullArtData);
     } catch (e) {
       console.log("Error in fetching.");
     }
   };
 
-  // console.log(ArtData);
-  // console.log({ cartArtDetails });
   //===================Use Effect to run fetch function upon mount======================
   useEffect(() => {
     getArtData();
@@ -150,10 +141,6 @@ function App() {
   const handleTableNumber = (value) => {
     setTableNumber(value);
   };
-
-  // console.log({ checkOut });
-  // console.log({ makePayment });
-  // console.log({ confirmationPage });
 
   return (
     <div>

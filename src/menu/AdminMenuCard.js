@@ -56,7 +56,6 @@ const AdminMenuCard = (props) => {
     setTags(fetchData.tags);
     setDescription(fetchData.description);
     setImgUrl(fetchData.img);
-    console.log(`fetching by id: ${JSON.stringify(fetchData)}`);
   };
 
   const handleUpdateClick = () => {
@@ -88,7 +87,7 @@ const AdminMenuCard = (props) => {
     });
 
     const updatedData = await res.json(); //patch router was set to send updated documents
-    console.log(updatedData);
+
     handleUpdateEntry(index, updatedData.value); //change
 
     setMenuAdminUpdate(false);

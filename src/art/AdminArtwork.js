@@ -37,9 +37,8 @@ const AdminArtwork = ({ ArtData }) => {
   };
   const handleChanges = () => {
     updateArtData();
-    console.log("clicked");
   };
-  console.log(sold);
+  // console.log(sold);
   return (
     <>
       <div className="adminartwork--header">Update Artwork</div>

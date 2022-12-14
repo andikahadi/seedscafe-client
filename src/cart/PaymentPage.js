@@ -27,7 +27,6 @@ const PaymentPage = ({
   const [tncCheck, setTncCheck] = useState(false);
   const [cardDetails, setCardDetails] = useState(false);
 
-  console.log({ cartArtDetails });
   const serverUri = "https://seedscafe.store";
   const updateToSold = async (id) => {
     const res = await fetch(serverUri + "/artwork/update", {
