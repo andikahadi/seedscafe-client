@@ -63,6 +63,7 @@ const MenuStateContainer = ({
         handleCatSelectedChange={handleCatSelectedChange}
         FullMenu={FullMenu}
         tableNumber={tableNumber}
+        setIsMenuPage={setIsMenuPage}
       />
     );
   } else if (menuPage === "Menu") {
