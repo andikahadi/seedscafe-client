@@ -28,7 +28,7 @@ const PaymentPage = ({
   const [cardDetails, setCardDetails] = useState(false);
 
   console.log({ cartArtDetails });
-  const serverUri = "http://54.95.77.120";
+  const serverUri = "https://seedscafe.store";
   const updateToSold = async (id) => {
     const res = await fetch(serverUri + "/artwork/update", {
       headers: {

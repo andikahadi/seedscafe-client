@@ -4,7 +4,7 @@ import "./menuStyles.css";
 const CashierAdmin = () => {
   // fetch all orders
   const [orders, setOrders] = useState([]);
-  const serverUri = "http://54.95.77.120";
+  const serverUri = "https://seedscafe.store";
   const fetchOrders = async () => {
     const res = await fetch(serverUri + "/order/");
     const data = await res.json();

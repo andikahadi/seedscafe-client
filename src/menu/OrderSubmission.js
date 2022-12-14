@@ -7,7 +7,7 @@ import "./menuStyles.css";
 import { Link } from "react-router-dom";
 
 const OrderSubmission = (props) => {
-  const serverUri = "http://54.95.77.120";
+  const serverUri = "https://seedscafe.store";
   const tableNumber = () => {
     if (props.tableNumber == "Takeaway") {
       return "Takeaway";

@@ -14,7 +14,7 @@ const AdminArtwork = ({ ArtData }) => {
   const [sold, setSold] = useState(false);
 
   const updateArtData = async () => {
-    const serverUri = "http://54.95.77.120";
+    const serverUri = "https://seedscafe.store";
     const res = await fetch(serverUri + "/artwork/update", {
       headers: {
         Accept: "application/json",

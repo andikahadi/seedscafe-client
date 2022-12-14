@@ -10,7 +10,7 @@ const AdminMenuCard = (props) => {
   const [tags, setTags] = useState();
   const [description, setDescription] = useState();
   const [imgUrl, setImgUrl] = useState();
-  const serverUri = "http://54.95.77.120";
+  const serverUri = "https://seedscafe.store";
 
   const handleNameChange = (event) => {
     setName(event.target.value);

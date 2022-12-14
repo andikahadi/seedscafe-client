@@ -7,7 +7,7 @@ import { useStepContext } from "@mui/material";
 import OrderListUpdate from "./OrderListUpdate";
 
 const OrderList = (props) => {
-  const serverUri = "http://54.95.77.120";
+  const serverUri = "https://seedscafe.store";
   let totalPrice = 0;
   for (let i = 0; i < props.foodOrder.length; i++) {
     totalPrice =

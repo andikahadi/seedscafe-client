@@ -42,7 +42,7 @@ function App() {
   const [tableNumber, setTableNumber] = useState();
   const [FullMenu, setFullMenu] = useState([]);
 
-  const serverUri = "http://54.95.77.120";
+  const serverUri = "https://seedscafe.store";
   //========================menu - fetch data from DB==========================
   const fetchMenuItems = async () => {
     const res = await fetch(serverUri + "/menu/allmenuitems");
