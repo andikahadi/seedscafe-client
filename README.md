@@ -8,6 +8,9 @@ Seeds Cafe is an inclusive social space found within Rainbow Centre at 501 Marga
 
 The main aim of the app is to create a digital platform for diners to order food and explore artwork done by Rainbow Centre’s students.
 
+Link to development website : https://seedscafe-client.vercel.app/
+Backend is deployed in AWS EC2 using docker, nginx and letsencrypt SSL. 
+
 # Technologies used to build frontend:
 
 React.js
